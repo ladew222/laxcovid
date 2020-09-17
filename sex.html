@@ -83,12 +83,13 @@
                 <b>Hospitalizations:</b><div class='hosp'></div>
                 <b>Negative:</b><div class='negative'></div>
                 <b>Positive:</b><div class='positive'></div>
+                 <b>Cases per 100k:</b><div class='positiveP'></div>
                 </br>
                 <h4>Other Views</h4>
                 <ul>
                   <li><a href="sex.html">Gender</a></li>
                   <li><a href="agej.html">Age</a></li>
-                  <li><a href="main.html">Other</a></li>
+                  <li><a href="index.html">Other</a></li>
                 </ul>
                 <br/>
                 Source: The data is pulled from <a href="https://www.dhs.wisconsin.gov/covid-19/data.htm">dhsgis.wi.gov</a> and pulls live data and is subject to their updates and entry.
@@ -166,6 +167,7 @@ $('.positive').text(dtot.total);
 $(".hosp").text(dtot.HOSP_YES);
 $(".negative").text(dtot.negative);
 $(".DATE").text(ds);
+$(".positiveP").text((dtot.total/118016)*100000);
 
 
 

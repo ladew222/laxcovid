@@ -92,6 +92,7 @@
                 <b>Hospitalizations:</b><div class='hosp'></div>
                 <b>Negative:</b><div class='negative'></div>
                 <b>Positive:</b><div class='positive'></div>
+                <b>Cases per 100k:</b><div class='positiveP'></div>
                 </br>
                 <h4>Other Views</h4>
                 <ul>
@@ -174,6 +175,7 @@ d3.json("https://dhsgis.wi.gov/server/rest/services/DHS_COVID19/COVID19_WI/Featu
   dtot.negative= data.features[0].attributes.NEG_NEW;
   dtot.HOSP_YES = data.features[1].attributes.HOSP_YES - data.features[0].attributes.HOSP_YES;
   $('.positive').text(dtot.total);
+  $(".positiveP").text((dtot.total/118016)*100000);
   $(".hosp").text(dtot.HOSP_YES);
   $(".negative").text(dtot.negative);
   $(".DATE").text(ds);
