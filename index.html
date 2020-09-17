@@ -196,7 +196,7 @@
                         d.HOSP_YES= d.HOSP_YES-itm.HOSP_YES;
                         d.DEATHS= d.DEATHS-itm.DEATHS;
                         d.NEGATIVE= d.NEGATIVE-itm.NEGATIVE;
-                        d.POSITIVITY_RATE = d.POSITIVE/d.NEGATIVE;
+                        d.POSITIVITY_RATE = (d.POSITIVE/d.NEGATIVE)*100;
 
                     }
                     //itm = e;
@@ -277,7 +277,7 @@
                         y.domain( [0,1000]).range([ height, 0 ]);
                         break;
                     case 'POSITIVITY_RATE':
-                        y.domain( [0,1]).range([ height, 0 ]);
+                        y.domain( [0,100]).range([ height, 0 ]);
                         break;
                     default:
                         // code block
